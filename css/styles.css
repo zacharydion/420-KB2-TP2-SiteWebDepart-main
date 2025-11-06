@@ -1,0 +1,102 @@
+ :root {
+     --padding: 8px;
+     --padding: 6px;
+     --border-radius: 10px;
+     --scroolbar-with: 14px;
+ }
+
+ * {
+     margin: 0px;
+     padding: 0px;
+     box-sizing: border-box;
+ }
+
+ .page {
+     display: flex;
+     flex-direction: column;
+     height: 100vh;
+     gap: var(--padding);
+     padding: var(--padding);
+ }
+
+ .page>* {
+     /* cibler tout les enfants enfant de l'éléments de classe page */
+     background: lightgray;
+     padding: 1rem;
+     border: 1px solid gray;
+ }
+
+ .main {
+     flex: 1;
+
+     /* contrecarrer les styles de page */
+     padding: 0px;
+     background: white;
+     overflow-y: auto;
+ }
+
+ .main>* {
+     background: white;
+     padding: var(--padding);
+     border: 1px solid gray;
+ }
+
+
+ .header,
+ .footer {
+     font-size: 1.5em;
+     font-weight: bolder;
+     display: flex;
+     gap: 8px;
+     align-items: center;
+ }
+
+ .aside {
+     width: 100px;
+ }
+
+ .content {
+    border:none;
+    font-family: google;
+ }
+
+ .menu {
+     display: flex;
+     gap: 8px;
+     flex-wrap: wrap;
+ }
+
+ .menuItem {
+     flex: 1;
+     width: 60px;
+     font-size: 0.60em;
+     font-weight: bold;
+     text-decoration: none;
+     color: dodgerblue;
+     border: 1px solid gray;
+ }
+
+ .selectedItem {
+     color: blue;
+ }
+
+ .favicon {
+     height: 32px;
+     width: 32px;
+ }
+
+ /*** classes pour l'apparence de la barre de défilement ***/
+ ::-webkit-scrollbar {
+     border-radius: var(--border-radius);
+     width: var(--scroolbar-with);
+ }
+
+ ::-webkit-scrollbar-track {
+     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+     border-radius: var(--border-radius);
+ }
+
+ ::-webkit-scrollbar-thumb {
+     border-radius: var(--border-radius);
+     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+ }

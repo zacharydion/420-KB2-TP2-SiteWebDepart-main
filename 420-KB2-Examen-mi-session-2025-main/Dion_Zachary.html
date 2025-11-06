@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /* décommentez temporairement pour reconnaitre les différentes sections*/
+        /*
+        div { border: 1px solid red; }
+        */
+        /* Complétez les classes suivantes */
+        .main {
+            margin: auto;
+            width: 700px;
+        }
+
+        .banner {
+            display: grid;
+            grid-template-columns: 60px auto;
+            background-image: linear-gradient(180deg, black, gray);
+            padding: 10px;
+            border-top-left-radius: 16px;
+            border-top-right-radius: 16px;
+        }
+
+        .bottomBanner {
+            height: 30px;
+            background-image: linear-gradient(180deg, gray, black);
+            border-bottom-left-radius: 16px;
+            border-bottom-right-radius: 16px;
+        }
+
+        .logo {
+            width: 50px;
+        }
+
+        .entreprise {
+            font-family: Impact, sans-serif;
+            font-size: 40px;
+            color: darkgray
+        }
+
+        .graphContainer {
+            padding-top: 20px;
+            display:grid;
+            grid-template-columns: auto 150px;
+        }
+
+        .section {
+            padding: 20px;
+            border-left: 1px solid gray;
+            border-right: 1px solid gray;
+        }
+
+        .graphs {
+            padding: 0px;
+        }
+
+        .graph {
+            margin-bottom: 40px;           
+            display:grid;
+            grid-template-columns: 90px auto;
+        }
+
+        .legend {
+            height: 160px;
+            border: 3px solid lightgray;
+            border-radius: 8px;
+            display: grid;
+            grid-template-columns: 50px auto;
+            
+        }
+
+        .blue {
+            background-color: blue;
+            height:20px;
+            width:20px;
+        }
+
+        .red {
+            background-color: red;
+            height:20px;
+            width:20px;}
+
+        .orange {
+            background-color: orange;
+            height:20px;
+            width:20px;}
+
+        .green {
+            background-color: green;
+            height:20px;
+            width:20px;}
+
+        .bars {
+            height: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .bar {
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        .graphTitle {
+            font-weight: bolder;
+            font-size:50px;
+            padding-left:120px;
+        }
+
+        .region {
+            align-content: center;
+            font-weight: bolder;
+            font-size:30px;
+            text-align:right;
+            margin-right:10px;
+
+        }
+
+        .sample {
+            margin: 10px;
+        }
+
+        .label {
+            font-weight: bolder;
+            font-size: 20px;
+            margin-top: 8px;
+            height: 22px;
+        }
+    </style>
+</head>
+
+<body>  <!-- Il est strictement défendu de modifier cette portion -->
+    <div class="main">
+        <div class="banner">
+            <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/3/33/Vanamo_Logo.png" alt="logo">
+            <div class="entreprise">Ink Experts</div>
+        </div>
+        <div class="section">
+            <div class="graphTitle">Ventes par région</div>
+            <hr>
+            <div class="graphContainer">
+                <div class="graphs">
+                    <div class="graph">
+                        <div class="region">
+                            <p>Nord</p>
+                        </div>
+                        <div class="bars">
+                            <div class="bar blue" style="width:80%"></div>
+                            <div class="bar red" style="width:60%"></div>
+                            <div class="bar orange" style="width:40%"></div>
+                            <div class="bar green" style="width:90%"></div>
+                        </div>
+                    </div>
+                    <div class="graph">
+                        <div class="region">
+                            <p>Sud</p>
+                        </div>
+                        <div class="bars">
+                            <div class="bar blue" style="width:40%"></div>
+                            <div class="bar red" style="width:50%"></div>
+                            <div class="bar orange" style="width:40%"></div>
+                            <div class="bar green" style="width:60%"></div>
+                        </div>
+                    </div>
+                    <div class="graph">
+                        <div class="region">
+                            <p>Est</p>
+                        </div>
+                        <div class="bars">
+                            <div class="bar blue" style="width:20%"></div>
+                            <div class="bar red" style="width:30%"></div>
+                            <div class="bar orange" style="width:40%"></div>
+                            <div class="bar green" style="width:50%"></div>
+                        </div>
+                    </div>
+                    <div class="graph">
+                        <div class="region">
+                            <p>Ouest</p>
+                        </div>
+                        <div class="bars">
+                            <div class="bar blue" style="width:70%"></div>
+                            <div class="bar red" style="width:80%"></div>
+                            <div class="bar orange" style="width:60%"></div>
+                            <div class="bar green" style="width:90%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="legend">
+                    <div class="sample blue"></div>
+                    <div class="label">2021</div>
+                    <div class="sample red"></div>
+                    <div class="label">2022</div>
+                    <div class="sample orange"></div>
+                    <div class="label">2023</div>
+                    <div class="sample green"></div>
+                    <div class="label">2024</div>
+                </div>
+            </div>
+        </div>
+        <div class="bottomBanner"></div>
+    </div>
+</body>
+
+</html>
