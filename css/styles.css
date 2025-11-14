@@ -84,6 +84,10 @@
      height: 32px;
      width: 32px;
  }
+.video{
+    display:none;
+    margin-top:20px;
+}
 
  /*** classes pour l'apparence de la barre de défilement ***/
  ::-webkit-scrollbar {
